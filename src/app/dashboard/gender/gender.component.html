@@ -1,0 +1,29 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Customer Gender</mat-card-title>
+		<mat-card-subtitle>As of month selected</mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content class="gender">
+		<div fxLayout="row">
+			<div fxFlex="50">
+				<span class="male"><mat-icon>fiber_manual_record</mat-icon> 53% Male</span>
+			</div>
+			<div fxFlex="50">
+				<span class="female">47% Female <mat-icon>fiber_manual_record</mat-icon></span>
+			</div>
+		</div>
+
+		<mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+
+		<div fxLayout="row" class="gender1">
+			<div fxFlex="50">
+				<p class="male-count">278</p>
+				<p class="male1">Male</p>
+			</div>
+			<div fxFlex="50">
+				<p class="female-count">246</p>
+				<p class="female1">Female</p>
+			</div>
+		</div>
+	</mat-card-content>
+</mat-card>

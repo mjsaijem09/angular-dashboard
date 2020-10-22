@@ -1,0 +1,12 @@
+<mat-sidenav-container class="main-container" autosize>
+
+	<mat-sidenav opened mode="side" class="side-bar">
+		<app-side-bar></app-side-bar>
+	</mat-sidenav>
+	<app-header [deviceXs]="deviceXs" [deviceSm]="deviceSm" [deviceMd]="deviceMd" [deviceLg]="deviceLg"
+		[deviceXl]="deviceXl"></app-header>
+
+	<div class="content-container custom">
+		<app-dashboard-content></app-dashboard-content>
+	</div>
+</mat-sidenav-container>

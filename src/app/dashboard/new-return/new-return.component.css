@@ -1,0 +1,59 @@
+.mat-progress-bar {
+  height: 10px !important;
+  border-radius: 4px !important;
+}
+
+.gender .male {
+  display: flex;
+  justify-content: flex-start;
+  color: #2356a6;
+}
+
+.gender .female {
+  display: flex;
+  justify-content: flex-end;
+  color: #67b7dc;
+}
+
+.female mat-icon.mat-icon {
+  line-height: 0.6;
+}
+
+.male mat-icon.mat-icon {
+  line-height: 0.6;
+}
+
+.gender1 {
+  text-align: center;
+}
+
+.gender1 p.male-count {
+  font-size: 18px;
+  margin: 10px 0 0 0;
+  color: #2356a6;
+}
+
+.gender1 p.male1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.gender1 p.female-count {
+  font-size: 18px;
+  margin: 10px 0 0 0;
+  color: #67b7dc;
+}
+
+.gender1 p.female1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* ------------------------------------------------------------- */
+mat-card-content.gender.mat-card-content {
+  margin: 0;
+}
+
+mat-card-subtitle.mat-card-subtitle {
+  margin: -8px 0 13px 0 !important;
+}

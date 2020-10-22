@@ -1,0 +1,71 @@
+<mat-card class="example-card">
+
+	<mat-card-header>
+		<mat-card-title>Business Rating</mat-card-title>
+	</mat-card-header>
+
+	<div fxLayout="row" fxLayoutAlign="space-between start" style="margin: 20px 0 0 0">
+		<div fxFlex="30" style="text-align: center">
+			<h1 class="no-margin">4.8</h1>
+			<div class="star-rating">
+				<mat-icon>grade</mat-icon>
+				<mat-icon>grade</mat-icon>
+				<mat-icon>grade</mat-icon>
+				<mat-icon>grade</mat-icon>
+				<mat-icon>grade</mat-icon>
+			</div>
+			<p class="reviews-count">2,800 Reviews</p>
+		</div>
+		<div class="rating-progress-bar" fxFlex="70">
+			<div class="bar">
+				<p class="no-margin">5</p>
+				<mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+			</div>
+			<div class="bar">
+				<p class="no-margin">4</p>
+				<mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+			</div>
+			<div class="bar">
+				<p class="no-margin">3</p>
+				<mat-progress-bar mode="determinate" value="9"></mat-progress-bar>
+			</div>
+			<div class="bar">
+				<p class="no-margin">2</p>
+				<mat-progress-bar mode="determinate" value="3"></mat-progress-bar>
+			</div>
+			<div class="bar">
+				<p class="no-margin">1</p>
+				<mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+			</div>
+		</div>
+	</div>
+
+	<mat-card-content class="business-rating-comment">
+		<div fxLayout="row" fxLayoutAlign="space-between center">
+			<p class="text1">Service Reviews</p>
+			<button mat-button>Sort</button>
+		</div>
+		<div style="margin: 0 0 20px 0 !important">
+			<div>
+				<div mat-card-avatar class="example-header-image"><span class="commentor">Joshua Ramirez</span></div>
+				<mat-icon class="star-rating">grade grade grade grade grade</mat-icon>
+				<div class="comment-box">Best massage I've had, second visit and plan on coming back for more</div>
+			</div>
+			<div>
+				<div mat-card-avatar class="example-header-image"><span class="commentor">Joshua Ramirez</span></div>
+				<mat-icon class="star-rating">grade grade grade grade grade</mat-icon>
+				<div class="comment-box">Best massage I've had, second visit and plan on coming back for more</div>
+			</div>
+			<div>
+				<div mat-card-avatar class="example-header-image"><span class="commentor">Joshua Ramirez</span></div>
+				<mat-icon class="star-rating">grade grade grade grade grade</mat-icon>
+				<div class="comment-box">Best massage I've had, second visit and plan on coming back for more</div>
+			</div>
+		</div>
+	</mat-card-content>
+
+	<mat-card-actions class="rating-footer">
+		<button mat-button class='custom-show-more-btn'>Show more</button>
+	</mat-card-actions>
+
+</mat-card>

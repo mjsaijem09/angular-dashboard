@@ -1,0 +1,20 @@
+.branch {
+  text-align: center;
+}
+
+.branch hr {
+  margin: 0 0 0 45px;
+  height: 30px;
+}
+.branch .cash-amount {
+  font-size: 25px;
+  color: #6794dc;
+}
+
+.branch p.location {
+  margin: 10px 0 0 0;
+}
+
+mat-card-header.title.mat-card-header {
+  margin: 0 0 16px 0 !important;
+}

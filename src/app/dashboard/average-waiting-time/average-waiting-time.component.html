@@ -1,0 +1,47 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Average Waiting Time
+			<span style="font-size: 12px; color: rgba(0, 0, 0, 0.54)">Most waited customer</span></mat-card-title>
+	</mat-card-header>
+	<mat-card-content fxLayout="row" fxLayoutAlign="space-around">
+		<div class="average-count" fxFlex="20">
+			<h2>16 mins</h2>
+			<p>Average Waiting Time</p>
+		</div>
+		<hr class="vertical-hr" style="margin: 55px 10px 0 10px; height: 144px;">
+		<div fxFlex="80">
+			<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="average-waiting-time-table">
+
+				<!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+				<!-- Name Column -->
+				<ng-container matColumnDef="name">
+					<th mat-header-cell *matHeaderCellDef> Name </th>
+					<td mat-cell *matCellDef="let element"> {{element.name}} </td>
+				</ng-container>
+
+				<!-- time Column -->
+				<ng-container matColumnDef="time">
+					<th mat-header-cell *matHeaderCellDef> time </th>
+					<td mat-cell *matCellDef="let element"> {{element.time}} </td>
+				</ng-container>
+
+				<!-- reference_no Column -->
+				<ng-container matColumnDef="reference_no">
+					<th mat-header-cell *matHeaderCellDef> Referance Number </th>
+					<td mat-cell *matCellDef="let element"> {{element.reference_no}} </td>
+				</ng-container>
+
+				<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+				<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+			</table>
+
+			<div class="custom-paginator">
+				<mat-paginator [length]="100" [pageSize]="4" [pageSizeOptions]="[4, 10, 25, 100]">
+				</mat-paginator>
+			</div>
+			<button mat-button class='custom-show-more-btn'>Show more</button>
+		</div>
+	</mat-card-content>
+</mat-card>

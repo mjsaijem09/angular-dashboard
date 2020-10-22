@@ -1,0 +1,18 @@
+.main-container {
+  width: 100%;
+}
+
+.content-container {
+  padding: 10px 0 0 10px;
+}
+
+.side-bar {
+  height: 100%;
+  padding: 0;
+  background-color: #2d323e;
+  color: #ffffff;
+}
+
+.mat-drawer {
+  position: fixed !important;
+}

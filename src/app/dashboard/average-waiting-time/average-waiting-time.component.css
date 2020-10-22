@@ -1,0 +1,23 @@
+.average-waiting-time-table {
+  width: 100%;
+}
+
+button.custom-show-more-btn {
+  background-color: #638fd4;
+  color: #ffffff;
+  width: 100%;
+}
+
+.average-count {
+  text-align: center;
+}
+
+.average-count h2 {
+  margin: 90px 0 0 0;
+  color: #638fd4;
+}
+
+.average-count p {
+  margin: 0;
+  font-size: 16px;
+}

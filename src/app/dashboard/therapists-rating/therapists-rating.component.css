@@ -1,0 +1,67 @@
+.no-margin {
+  margin: -6px 10px 0 0;
+}
+
+h1.no-margin {
+  color: #638fd4;
+}
+
+.star-rating {
+  margin: 6px 0 0 0;
+}
+
+.star-rating mat-icon.mat-icon {
+  color: #638fd4;
+  font-size: 18px;
+  width: 18px;
+}
+
+mat-icon.star-rating {
+  color: #638fd4;
+  font-size: 18px;
+  width: 18px;
+}
+
+.rating-progress-bar mat-progress-bar.mat-progress-bar.mat-primary {
+  height: 10px;
+}
+
+.rating-progress-bar .mat-progress-bar-buffer.mat-progress-bar-element {
+  background-color: #ffffff;
+}
+
+.rating-progress-bar .mat-progress-bar-fill::after {
+  background-color: #638fd4;
+}
+
+.rating-progress-bar .bar {
+  display: flex;
+  margin: 0 0 4px 0;
+}
+
+p.reviews-count {
+  margin: 5px 12px 0 0;
+  color: #989898;
+  font-size: 12px;
+}
+
+mat-card-content.business-rating-comment {
+  margin: 10px 0 0 0 !important;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+span.commentor {
+  position: absolute;
+  margin: 11px 0 0 48px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.comment-box {
+  width: 285px;
+  color: #797979;
+}

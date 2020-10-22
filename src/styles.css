@@ -1,0 +1,95 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+p {
+  font-family: Lato;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container .mat-card-header-text {
+  margin: 0;
+}
+
+.main-container mat-card.mat-card {
+  box-shadow: none;
+  border: solid 2px #ddd;
+  margin: 0 10px 10px 0px;
+}
+
+mat-sidenav.side-bar {
+  border: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #adadadc2;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9c9c9cdc;
+  width: 10px;
+}
+
+.mat-progress-bar-buffer {
+  background-color: #67b7dc;
+}
+
+.mat-progress-bar-fill::after {
+  background-color: #2356a6;
+}
+
+.mat-paginator-page-size-label {
+  display: none;
+}
+
+.custom-paginator .mat-paginator-container {
+  padding: 0;
+  margin: 0 0 -7px 0;
+  justify-content: space-around;
+  justify-items: baseline;
+}
+
+button.custom-show-more-btn {
+  background-color: #638fd4;
+  color: #ffffff;
+  width: 100%;
+}
+
+.custom .mat-card-actions,
+.mat-card-content {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.text1 {
+  font-size: 20px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+hr.horizontal-hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+hr.vertical-hr {
+  border: 0;
+  border-left: 1px solid #ddd;
+}
+
+.rating-progress-bar .mat-progress-bar-buffer.mat-progress-bar-element {
+  background-color: #ffffff;
+}

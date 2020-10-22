@@ -1,0 +1,24 @@
+mat-toolbar mat-toolbar-row.mat-toolbar-row {
+  color: #1e2129;
+  box-shadow: 0px 1px 4px -2px rgba(0, 0, 0, 0.37) !important;
+}
+
+mat-toolbar-row.header-content.mat-toolbar-row {
+  justify-content: flex-end;
+}
+
+button.profile_menu {
+  background-color: #2d323e;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+}
+
+.profile_menu mat-icon.mat-icon {
+  width: 37px;
+  height: 35px;
+}
+
+.header-content button {
+  margin-left: 20px;
+}

@@ -1,0 +1,52 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Appointment Logs</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<div class="appointment-count" fxFlex="20">
+			<h2>12</h2>
+			<p>No Show</p>
+			<hr class="horizontal-hr" width="52px">
+			<h2>8</h2>
+			<p>Cancelled</p>
+			<hr class="horizontal-hr" width="52px">
+			<h2>9</h2>
+			<p>Late</p>
+		</div>
+		<hr class="vertical-hr" style="margin: 55px 10px 0 10px; height: 144px;">
+		<div fxFlex="80">
+			<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="appointment-logs-table">
+
+				<!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+				<!-- Name Column -->
+				<ng-container matColumnDef="name">
+					<th mat-header-cell *matHeaderCellDef> Name </th>
+					<td mat-cell *matCellDef="let element"> {{element.name}} </td>
+				</ng-container>
+
+				<!-- spent Column -->
+				<ng-container matColumnDef="spent">
+					<th mat-header-cell *matHeaderCellDef> Spent </th>
+					<td mat-cell *matCellDef="let element"> ${{element.spent}} </td>
+				</ng-container>
+
+				<!-- last_session Column -->
+				<ng-container matColumnDef="last_session">
+					<th mat-header-cell *matHeaderCellDef> Last Session </th>
+					<td mat-cell *matCellDef="let element"> {{element.last_session}} </td>
+				</ng-container>
+
+				<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+				<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+			</table>
+
+			<div class="custom-paginator">
+				<mat-paginator [length]="100" [pageSize]="4" [pageSizeOptions]="[4, 10, 25, 100]">
+				</mat-paginator>
+			</div>
+			<button mat-button class='custom-show-more-btn'>Show more</button>
+		</div>
+	</mat-card-content>
+</mat-card>

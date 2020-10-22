@@ -1,0 +1,45 @@
+mat-toolbar.side-bar-header {
+  background-color: #1e2129;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+span.logo {
+  margin: 0 20px 0 0;
+  font-size: 15px;
+}
+
+mat-icon.hamburger-icon {
+  margin: 0 4px 0 4px;
+}
+
+.page-link ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  padding: 10px 0 10px 10px;
+  font-family: sans-serif;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.page-link ul li a.hover {
+  background-color: #95b0bd0d;
+}
+
+.page-link ul li a.active {
+  background-color: #95b0bd26;
+}
+
+.page-link ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.page-link {
+  left: 0px;
+}
+
+.page-link ul li a span {
+  padding: 4px 0 0 10px;
+}
