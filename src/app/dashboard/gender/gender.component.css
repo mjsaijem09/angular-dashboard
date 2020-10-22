@@ -3,6 +3,10 @@
   border-radius: 4px !important;
 }
 
+mat-card-content.gender {
+  padding: 10px 0 0 0;
+}
+
 .gender .male {
   display: flex;
   color: #2356a6;
@@ -47,6 +51,7 @@
 
 .gender {
   text-align: center;
+  margin: 12px 0 0 0;
 }
 /* ------------------------------------------------------------- */
 mat-card-content.gender.mat-card-content {
