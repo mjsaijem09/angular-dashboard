@@ -1,7 +1,6 @@
 <!-- culumn 1 -->
 <div fxLayout="row" *ngIf="deviceXl || deviceLg">
-	<app-new-sales fxFlex="65" [deviceXs]="deviceXs" [deviceSm]="deviceSm" [deviceMd]="deviceMd" [deviceLg]="deviceLg"
-		[deviceXl]="deviceXl"></app-new-sales>
+	<app-new-sales fxFlex="65"></app-new-sales>
 	<div fxFlex="35">
 		<app-marketing></app-marketing>
 		<app-cash-drawer></app-cash-drawer>
@@ -17,7 +16,8 @@
 </div>
 
 <div fxLayout="column" *ngIf="deviceSm || deviceXs">
-	<app-new-sales fxFlex="100"></app-new-sales>
+	<app-new-sales fxFlex="100" [deviceXs]="deviceXs" [deviceSm]="deviceSm" [deviceMd]="deviceMd" [deviceLg]="deviceLg"
+		[deviceXl]="deviceXl"></app-new-sales>
 	<app-marketing fxFlex="100"></app-marketing>
 	<app-cash-drawer fxFlex="100"></app-cash-drawer>
 </div>

@@ -26,8 +26,8 @@ import { TopTherapistComponent } from "./dashboard/top-therapist/top-therapist.c
 import { AverageWaitingTimeComponent } from "./dashboard/average-waiting-time/average-waiting-time.component";
 import { AppointmentLogsComponent } from "./dashboard/appointment-logs/appointment-logs.component";
 import { CheckoutLogsComponent } from "./dashboard/checkout-logs/checkout-logs.component";
-import { BusinessRatingComponent } from './dashboard/business-rating/business-rating.component';
-import { TherapistsRatingComponent } from './dashboard/therapists-rating/therapists-rating.component';
+import { BusinessRatingComponent } from "./dashboard/business-rating/business-rating.component";
+import { TherapistsRatingComponent } from "./dashboard/therapists-rating/therapists-rating.component";
 
 @NgModule({
   imports: [

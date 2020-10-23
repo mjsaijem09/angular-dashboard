@@ -1,6 +1,5 @@
-import { Component, OnInit, OnDestroy, ViewChild } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { MediaObserver, MediaChange } from "@angular/flex-layout";
-import { MatSidenav } from "@angular/material/sidenav";
 import { Subscription } from "rxjs";
 
 @Component({
@@ -20,15 +19,8 @@ export class DashboardContentComponent implements OnInit, OnDestroy {
     this.mediaSubs.unsubscribe();
   }
 
-  @ViewChild("sideBar") sideBar: MatSidenav;
-  isExpanded: boolean = true;
-
-  toggleSideNav(e) {
-    console.log(e);
-    this.isExpanded = e;
-  }
-
   constructor(public mediaobserver: MediaObserver) {}
+
   ngOnInit() {
     this.mediaSubs = this.mediaobserver.media$.subscribe(
       (result: MediaChange) => {
