@@ -4,7 +4,7 @@
 
 		<div>
 			<button class="header-hamburger-icon" mat-icon-button *ngIf="deviceMd || deviceSm || deviceXs">
-        <mat-icon>menu</mat-icon>
+        <mat-icon (click)="showSidebar()">menu</mat-icon>
       </button>
 		</div>
 
@@ -52,3 +52,21 @@
 	</mat-toolbar-row>
 
 </mat-toolbar>
+
+<div class="hidden-side-bar" [ngClass]="status ? 'show' : 'hide'">
+	<mat-toolbar>
+		<mat-toolbar-row>
+			<span class="logo">Massage Now</span>
+			<mat-icon aria-hidden="false" (click)="hideSidebar()" class="hamburger-icon">close</mat-icon>
+		</mat-toolbar-row>
+	</mat-toolbar>
+	<nav class="page-link">
+		<ul *ngFor="let nav of navs">
+			<li>
+				<a routerLink="#">
+					<mat-icon aria-hidden="false">{{ nav.icon }}</mat-icon><span>{{ nav.title }}</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

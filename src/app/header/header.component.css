@@ -26,3 +26,65 @@ button.profile_menu {
 .header-content button.header-hamburger-icon {
   margin: 0 0 0 0 !important;
 }
+
+.hidden-side-bar {
+  position: fixed;
+  z-index: 10000000000000000000000;
+  left: 0;
+  top: 0;
+  background-color: #2d323e;
+  color: #ffffff;
+  height: 120%;
+}
+
+.hidden-side-bar mat-toolbar {
+  background-color: #2d323ef5;
+  color: #ffffff;
+}
+
+span.logo {
+  margin: 0 20px 0 0;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+mat-icon.hamburger-icon {
+  margin: 0 4px 0 4px;
+  color: #ffffff;
+}
+
+.page-link ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  padding: 10px 0 10px 10px;
+  font-family: sans-serif;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.page-link ul li a.hover {
+  background-color: #95b0bd0d;
+}
+
+.page-link ul li a.active {
+  background-color: #95b0bd26;
+}
+
+.page-link ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.page-link {
+  left: 0px;
+}
+
+.page-link ul li a span {
+  padding: 4px 0 0 10px;
+}
+
+.hidden-side-bar.hide {
+  display: none;
+}
