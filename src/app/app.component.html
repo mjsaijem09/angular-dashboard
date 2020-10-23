@@ -1,6 +1,6 @@
 <mat-sidenav-container class="main-container" autosize>
 
-	<mat-sidenav opened mode="side" class="side-bar">
+	<mat-sidenav opened mode="side" class="side-bar" *ngIf="deviceXl || deviceLg">
 		<app-side-bar></app-side-bar>
 	</mat-sidenav>
 	<app-header [deviceXs]="deviceXs" [deviceSm]="deviceSm" [deviceMd]="deviceMd" [deviceLg]="deviceLg"
