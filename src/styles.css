@@ -58,7 +58,7 @@ mat-sidenav.side-bar {
 
 .custom-paginator .mat-paginator-container {
   padding: 0;
-  margin: 0 0 -7px 0;
+  margin: 0 0 -3px 0;
   justify-content: space-around;
   justify-items: baseline;
 }

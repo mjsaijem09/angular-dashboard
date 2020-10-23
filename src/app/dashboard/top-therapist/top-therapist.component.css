@@ -45,8 +45,8 @@ p.reviews-count {
   font-size: 12px;
 }
 
-mat-card-content.business-rating-comment {
-  margin: 10px 0 0 0 !important;
+mat-card-content.top-therapist {
+  margin: 20px 0 28px 0 !important;
 }
 
 .example-header-image {
@@ -73,4 +73,8 @@ span.commentor {
 
 .medal img {
   width: 50px;
+}
+
+.top-therapist hr.horizontal-hr {
+  margin: 20px 0 20px 0;
 }

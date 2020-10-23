@@ -53,6 +53,11 @@ mat-card-content.gender {
   text-align: center;
   margin: 12px 0 0 0;
 }
+
+.gender1 {
+  text-align: center;
+  margin: 8px 0 0 0;
+}
 /* ------------------------------------------------------------- */
 mat-card-content.gender.mat-card-content {
   margin: 0;

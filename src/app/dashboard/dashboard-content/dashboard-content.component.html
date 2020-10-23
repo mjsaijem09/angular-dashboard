@@ -14,23 +14,19 @@
 	<app-products fxFlex="33"></app-products>
 </mat-card>
 
-<div fxLayout="row">
-	<div fxFlex="66">
-		<div>
-			<app-cost fxFlex="50"></app-cost>
-			<div fxFlex="50">
-				<app-gender></app-gender>
-				<app-new-return></app-new-return>
-			</div>
+<div fxLayout="column">
+	<div>
+		<app-cost fxFlex="33"></app-cost>
+		<div fxFlex="33">
+			<app-gender></app-gender>
+			<app-new-return></app-new-return>
 		</div>
-		<div>
-			<app-payment-method fxFlex="50"></app-payment-method>
-			<app-profits fxFlex="50"></app-profits>
-		</div>
+		<app-top-spender fxFlex="33"></app-top-spender>
 	</div>
-	<div fxFlex="34">
-		<app-top-spender></app-top-spender>
-		<app-checkout-logs></app-checkout-logs>
+	<div>
+		<app-payment-method fxFlex="33"></app-payment-method>
+		<app-profits fxFlex="33"></app-profits>
+		<app-checkout-logs fxFlex="33"></app-checkout-logs>
 	</div>
 </div>
 
