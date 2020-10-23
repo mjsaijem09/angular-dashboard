@@ -4,13 +4,23 @@ import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_spirited from "@amcharts/amcharts4/themes/frozen";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
+import { MediaObserver, MediaChange } from "@angular/flex-layout";
+import { Subscription } from "rxjs";
+
 @Component({
   selector: "app-products",
   templateUrl: "./products.component.html",
   styleUrls: ["./products.component.css"]
 })
 export class ProductsComponent implements OnInit {
-  constructor() {}
+  mediaSubs: Subscription;
+  deviceXs: boolean;
+  deviceSm: boolean;
+  deviceMd: boolean;
+  deviceLg: boolean;
+  deviceXl: boolean;
+
+  constructor(public mediaobserver: MediaObserver) {}
 
   chartTitle = "Products";
   @Input() pie;
@@ -20,6 +30,17 @@ export class ProductsComponent implements OnInit {
     setTimeout(() => {
       this.plotPieFirstChart();
     }, 2000);
+
+    this.mediaSubs = this.mediaobserver.media$.subscribe(
+      (result: MediaChange) => {
+        console.log(result.mqAlias);
+        this.deviceXs = result.mqAlias === "xs" ? true : false;
+        this.deviceSm = result.mqAlias === "sm" ? true : false;
+        this.deviceMd = result.mqAlias === "md" ? true : false;
+        this.deviceLg = result.mqAlias === "lg" ? true : false;
+        this.deviceXl = result.mqAlias === "xl" ? true : false;
+      }
+    );
   }
 
   plotPieFirstChart() {
@@ -120,5 +141,8 @@ export class ProductsComponent implements OnInit {
     // "topPlatform" + " " + "week-" + this.filterData.week[0];
     chart.exporting.menu.align = "left";
     chart.exporting.menu.verticalAlign = "top";
+  }
+  ngOnDestroy() {
+    this.mediaSubs.unsubscribe();
   }
 }
