@@ -20,7 +20,6 @@ export class DashboardContentComponent implements OnInit, OnDestroy {
   }
 
   constructor(public mediaobserver: MediaObserver) {}
-
   ngOnInit() {
     this.mediaSubs = this.mediaobserver.media$.subscribe(
       (result: MediaChange) => {

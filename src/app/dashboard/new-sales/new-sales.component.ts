@@ -10,6 +10,9 @@ import {
 } from "@angular/core";
 import { isPlatformBrowser } from "@angular/common";
 
+import { MediaObserver, MediaChange } from "@angular/flex-layout";
+import { Subscription } from "rxjs";
+
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
@@ -19,12 +22,13 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
   templateUrl: "./new-sales.component.html",
   styleUrls: ["./new-sales.component.css"]
 })
-export class NewSalesComponent implements OnInit {
-  @Input() deviceXs: boolean;
-  @Input() deviceSm: boolean;
-  @Input() deviceMd: boolean;
-  @Input() deviceLg: boolean;
-  @Input() deviceXl: boolean;
+export class NewSalesComponent implements OnInit, OnDestroy {
+  mediaSubs: Subscription;
+  deviceXs: boolean;
+  deviceSm: boolean;
+  deviceMd: boolean;
+  deviceLg: boolean;
+  deviceXl: boolean;
 
   months: any = [
     "January",
@@ -56,7 +60,11 @@ export class NewSalesComponent implements OnInit {
   @Input() lineData;
   private chart: am4charts.XYChart;
 
-  constructor(@Inject(PLATFORM_ID) private platformId, private zone: NgZone) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId,
+    private zone: NgZone,
+    public mediaobserver: MediaObserver
+  ) {}
 
   valueChange(id: number) {
     if (this.value.indexOf(id) > -1) {
@@ -82,6 +90,16 @@ export class NewSalesComponent implements OnInit {
   // Run the function only in the browser
   ngOnInit() {
     console.log("this.lineData ===>", this.lineData);
+    this.mediaSubs = this.mediaobserver.media$.subscribe(
+      (result: MediaChange) => {
+        console.log(result.mqAlias);
+        this.deviceXs = result.mqAlias === "xs" ? true : false;
+        this.deviceSm = result.mqAlias === "sm" ? true : false;
+        this.deviceMd = result.mqAlias === "md" ? true : false;
+        this.deviceLg = result.mqAlias === "lg" ? true : false;
+        this.deviceXl = result.mqAlias === "xl" ? true : false;
+      }
+    );
   }
 
   viewSelectedVal(val) {
@@ -200,6 +218,7 @@ export class NewSalesComponent implements OnInit {
   }
 
   ngOnDestroy() {
+    this.mediaSubs.unsubscribe();
     // Clean up chart when the component is removed
     this.browserOnly(() => {
       if (this.chart) {

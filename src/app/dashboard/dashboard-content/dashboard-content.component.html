@@ -16,15 +16,14 @@
 </div>
 
 <div fxLayout="column" *ngIf="deviceSm || deviceXs">
-	<app-new-sales fxFlex="100" [deviceXs]="deviceXs" [deviceSm]="deviceSm" [deviceMd]="deviceMd" [deviceLg]="deviceLg"
-		[deviceXl]="deviceXl"></app-new-sales>
+	<app-new-sales fxFlex="100"></app-new-sales>
 	<app-marketing fxFlex="100"></app-marketing>
 	<app-cash-drawer fxFlex="100"></app-cash-drawer>
 </div>
 
 <!-- culumn 2 -->
 
-<mat-card fxLayout="row">
+<mat-card fxLayout="row" *ngIf="deviceXl || deviceLg || deviceMd">
 	<app-revenue fxFlex="33"></app-revenue>
 	<hr class="vertical-hr" fxFlex style="margin:0 20px 0 20px">
 	<app-services fxFlex="33"></app-services>
@@ -32,29 +31,68 @@
 	<app-products fxFlex="33"></app-products>
 </mat-card>
 
-<div fxLayout="column">
-	<div>
-		<app-cost fxFlex="33"></app-cost>
-		<div fxFlex="33">
-			<app-gender></app-gender>
-			<app-new-return></app-new-return>
-		</div>
-		<app-top-spender fxFlex="34"></app-top-spender>
+<mat-card fxLayout="column" *ngIf="deviceSm || deviceXs">
+	<app-revenue fxFlex="100"></app-revenue>
+	<hr class="vertical-hr" fxFlex style="margin:0 20px 0 20px">
+	<app-services fxFlex="100"></app-services>
+	<hr class="vertical-hr" fxFlex style="margin:0 20px 0 20px">
+	<app-products fxFlex="100"></app-products>
+</mat-card>
+
+<!-- culumn 3 -->
+
+<div *ngIf="deviceXl || deviceLg || deviceMd">
+	<app-cost fxFlex="33"></app-cost>
+	<div fxFlex="33">
+		<app-gender></app-gender>
+		<app-new-return></app-new-return>
 	</div>
-	<div>
-		<app-payment-method fxFlex="33"></app-payment-method>
-		<app-profits fxFlex="33"></app-profits>
-		<app-checkout-logs fxFlex="34"></app-checkout-logs>
-	</div>
+	<app-top-spender fxFlex="34"></app-top-spender>
 </div>
 
-<div fxLayout="row">
+<div *ngIf="deviceSm || deviceXs">
+	<app-cost></app-cost>
+	<app-gender></app-gender>
+	<app-new-return></app-new-return>
+	<app-top-spender></app-top-spender>
+</div>
+
+<!-- culumn 4 -->
+
+<div *ngIf="deviceXl || deviceLg || deviceMd">
+	<app-payment-method fxFlex="33"></app-payment-method>
+	<app-profits fxFlex="33"></app-profits>
+	<app-checkout-logs fxFlex="34"></app-checkout-logs>
+</div>
+
+<div *ngIf="deviceSm || deviceXs">
+	<app-payment-method></app-payment-method>
+	<app-profits></app-profits>
+	<app-checkout-logs></app-checkout-logs>
+</div>
+
+<!-- culumn 5 -->
+
+<div fxLayout="row" *ngIf="deviceXl || deviceLg || deviceMd">
 	<app-average-waiting-time fxFlex="50"></app-average-waiting-time>
 	<app-appointment-logs fxFlex="50"></app-appointment-logs>
 </div>
 
-<div fxLayout="row">
+<div fxLayout="column" *ngIf="deviceSm || deviceXs">
+	<app-average-waiting-time fxFlex="100"></app-average-waiting-time>
+	<app-appointment-logs fxFlex="100"></app-appointment-logs>
+</div>
+
+<!-- culumn 6 -->
+
+<div fxLayout="row" *ngIf="deviceXl || deviceLg || deviceMd">
 	<app-business-rating fxFlex="33"></app-business-rating>
 	<app-top-therapist fxFlex="33"></app-top-therapist>
 	<app-therapists-rating fxFlex="34"></app-therapists-rating>
+</div>
+
+<div fxLayout="column" *ngIf="deviceSm || deviceXs">
+	<app-business-rating fxFlex="100"></app-business-rating>
+	<app-top-therapist fxFlex="100"></app-top-therapist>
+	<app-therapists-rating fxFlex="100"></app-therapists-rating>
 </div>
