@@ -1,42 +1,53 @@
 <mat-toolbar>
 
-	<mat-toolbar-row class="header-content">
+	<mat-toolbar-row class="header-content" div fxLayout="row" fxLayoutAlign="space-between center">
 
-		<button mat-icon-button [matMenuTriggerFor]="translete_menu">
-      <mat-icon>translate</mat-icon>
-    </button>
-		<mat-menu #translete_menu="matMenu">
-			<button mat-menu-item>
-        <span>English</span>
+		<div>
+			<button class="header-hamburger-icon" mat-icon-button *ngIf="deviceMd || deviceSm || deviceXs">
+        <mat-icon>menu</mat-icon>
       </button>
-			<button mat-menu-item>
-        <span>Mandarin</span>
-      </button>
-		</mat-menu>
+		</div>
 
-		<button mat-icon-button [matMenuTriggerFor]="notification_menu">
-      <mat-icon>notifications</mat-icon>
-    </button>
-		<mat-menu #notification_menu="matMenu">
-			<button mat-menu-item>
-        <span>1</span>
+		<div>
+			<button mat-icon-button [matMenuTriggerFor]="translete_menu">
+        <mat-icon>translate</mat-icon>
       </button>
-			<button mat-menu-item>
-        <span>1</span>
-      </button>
-		</mat-menu>
 
-		<button mat-icon-button [matMenuTriggerFor]="profile_menu" class="profile_menu">
-      <mat-icon>JRS</mat-icon>
-    </button>
-		<mat-menu #profile_menu="matMenu">
-			<button mat-menu-item>
-        <span>1</span>
+			<mat-menu #translete_menu="matMenu">
+				<button mat-menu-item>
+          <span>English</span>
+        </button>
+				<button mat-menu-item>
+          <span>Mandarin</span>
+        </button>
+			</mat-menu>
+
+			<button mat-icon-button [matMenuTriggerFor]="notification_menu">
+        <mat-icon>notifications</mat-icon>
       </button>
-			<button mat-menu-item>
-        <span>1</span>
+
+			<mat-menu #notification_menu="matMenu">
+				<button mat-menu-item>
+          <span>1</span>
+        </button>
+				<button mat-menu-item>
+          <span>1</span>
+        </button>
+			</mat-menu>
+
+			<button mat-icon-button [matMenuTriggerFor]="profile_menu" class="profile_menu">
+        <mat-icon>JRS</mat-icon>
       </button>
-		</mat-menu>
+
+			<mat-menu #profile_menu="matMenu">
+				<button mat-menu-item>
+          <span>1</span>
+        </button>
+				<button mat-menu-item>
+          <span>1</span>
+        </button>
+			</mat-menu>
+		</div>
 
 	</mat-toolbar-row>
 

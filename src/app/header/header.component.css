@@ -22,3 +22,7 @@ button.profile_menu {
 .header-content button {
   margin-left: 20px;
 }
+
+.header-content button.header-hamburger-icon {
+  margin: 0 0 0 0 !important;
+}
