@@ -25,13 +25,13 @@ export class HeaderComponent implements OnInit {
     { title: "Setup", icon: "settings", path: "javascript:;" }
   ];
 
-  status: boolean = false;
+  sidebarStatus: boolean = false;
   showSidebar() {
-    this.status = !this.status;
+    this.sidebarStatus = !this.sidebarStatus;
   }
 
   hideSidebar() {
-    this.status = !this.status;
+    this.sidebarStatus = !this.sidebarStatus;
   }
 
   constructor() {}

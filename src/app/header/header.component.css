@@ -32,18 +32,24 @@ button.profile_menu {
   z-index: 10000000000000000000000;
   left: 0;
   top: 0;
-  background-color: #2d323e;
+  background-color: #2d323eeb;
   color: #ffffff;
   height: 120%;
+  transition-delay: 1.6s !important;
+}
+
+.hidden-side-bar.hide {
+  left: -180px;
+  transition-delay: 1.6s !important;
 }
 
 .hidden-side-bar mat-toolbar {
-  background-color: #2d323ef5;
+  background-color: #2d323eeb;
   color: #ffffff;
 }
 
 span.logo {
-  margin: 0 20px 0 0;
+  margin: 0 20px 0 6px;
   font-size: 15px;
   color: #ffffff;
 }
@@ -83,8 +89,4 @@ nav.page-link {
 
 .page-link ul li a span {
   padding: 4px 0 0 10px;
-}
-
-.hidden-side-bar.hide {
-  display: none;
 }
