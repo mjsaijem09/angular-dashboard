@@ -20,6 +20,12 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
   styleUrls: ["./new-sales.component.css"]
 })
 export class NewSalesComponent implements OnInit {
+  @Input() deviceXs: boolean;
+  @Input() deviceSm: boolean;
+  @Input() deviceMd: boolean;
+  @Input() deviceLg: boolean;
+  @Input() deviceXl: boolean;
+
   months: any = [
     "January",
     "Febraury",

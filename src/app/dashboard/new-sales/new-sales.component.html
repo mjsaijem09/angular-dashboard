@@ -65,6 +65,67 @@
 				</mat-select>
 			</mat-form-field>
 		</div>
+		<div fxLayout="column" *ngIf="deviceXs">
+			<mat-form-field appearance="outline">
+				<mat-label>Location</mat-label>
+				<mat-select [value]="value" class="user-control" multiple>
+					<mat-option #allSelected (click)="toggleAllSelection()" [value]="0">All</mat-option>
+					<mat-option (click)="valueChange(store.id)" [value]="store.id" *ngFor="let store of stores">
+						{{ store.name }}</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline">
+				<mat-label>View</mat-label>
+				<mat-select class="user-control" (selectionChange)="viewSelectedVal(view.value)" #view>
+					<mat-option value="w">Weekly</mat-option>
+					<mat-option value="m">Monthly</mat-option>
+					<mat-option value="y">Yearly</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline" *ngIf="(viewSelected == 'w')">
+				<mat-label>Range</mat-label>
+				<input matInput [matDatepicker]="range" />
+				<mat-datepicker-toggle matSuffix [for]="range"></mat-datepicker-toggle>
+				<mat-datepicker #range color="primary"></mat-datepicker>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline" *ngIf="(viewSelected == 'm')">
+				<mat-label>Range</mat-label>
+				<mat-select class="user-control">
+					<mat-option value="{{month}}" *ngFor="let month of months">{{month}}</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline" *ngIf="(viewSelected == 'y')">
+				<mat-label>Range</mat-label>
+				<mat-select class="user-control">
+					<mat-option value="{{year}}" *ngFor="let year of years">{{year}}</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline" *ngIf="(viewSelected == 'w')">
+				<mat-label>Compare</mat-label>
+				<input matInput [matDatepicker]="compare" />
+				<mat-datepicker-toggle matSuffix [for]="compare"></mat-datepicker-toggle>
+				<mat-datepicker #compare color="primary"></mat-datepicker>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline" *ngIf="(viewSelected == 'm')">
+				<mat-label>Compare</mat-label>
+				<mat-select class="user-control">
+					<mat-option value="{{month}}" *ngFor="let month of months">{{month}}</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline" *ngIf="(viewSelected == 'y')">
+				<mat-label>Compare</mat-label>
+				<mat-select class="user-control">
+					<mat-option value="{{year}}" *ngFor="let year of years">{{year}}</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
 		<div class="line-chart" id="line-chart"></div>
 	</mat-card-content>
 
