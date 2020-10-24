@@ -7,7 +7,8 @@ h1.no-margin {
 }
 
 .star-rating {
-  margin: 6px 11px 0 0;
+  margin: 6px 0 0 0;
+  text-align: left;
 }
 
 .star-rating mat-icon.mat-icon {

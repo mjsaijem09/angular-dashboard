@@ -39,7 +39,7 @@ button.profile_menu {
 }
 
 .hidden-side-bar.hide {
-  left: -180px;
+  left: -190px;
   transition-delay: 1.6s !important;
 }
 
