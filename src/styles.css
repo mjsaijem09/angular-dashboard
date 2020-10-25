@@ -40,7 +40,7 @@ mat-sidenav.side-bar {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #9c9c9cdc;
+  background: #5e5e5edc;
   width: 10px;
 }
 
