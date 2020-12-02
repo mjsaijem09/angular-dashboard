@@ -1,15 +1,21 @@
 <mat-toolbar class="side-bar-header">
-	<mat-toolbar-row>
-		<span class="logo" *ngIf="isExpanded">Massage Now</span>
-		<mat-icon aria-hidden="false" (click)="toggleSideNav()" class="hamburger-icon">menu</mat-icon>
-	</mat-toolbar-row>
+  <mat-toolbar-row>
+    <span class="logo" *ngIf="isExpanded">Angular Dashboard</span>
+    <mat-icon
+      aria-hidden="false"
+      (click)="toggleSideNav()"
+      class="hamburger-icon"
+      >menu</mat-icon
+    >
+  </mat-toolbar-row>
 </mat-toolbar>
 <nav class="page-link">
-	<ul *ngFor="let nav of navs">
-		<li>
-			<a routerLink="#">
-				<mat-icon aria-hidden="false">{{ nav.icon }}</mat-icon><span *ngIf="isExpanded">{{ nav.title }}</span>
-			</a>
-		</li>
-	</ul>
+  <ul *ngFor="let nav of navs">
+    <li>
+      <a routerLink="#">
+        <mat-icon aria-hidden="false">{{ nav.icon }}</mat-icon
+        ><span *ngIf="isExpanded">{{ nav.title }}</span>
+      </a>
+    </li>
+  </ul>
 </nav>
